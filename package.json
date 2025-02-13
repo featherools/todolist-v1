@@ -1,0 +1,20 @@
+{
+  "name": "todolist-v1",
+  "version": "1.0.0",
+  "description": "A todo list app in which we are using ejs node , furthering the knowledge about templating and partials.",
+  "license": "ISC",
+  "author": "Mohd Sadaf Hashmi",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "lodash": "^4.17.21",
+    "mongodb": "^6.13.0",
+    "mongoose": "^8.9.7"
+  }
+}

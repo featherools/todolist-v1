@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Workday</title>
+		<link rel="stylesheet" href="/css/styles.css" />
+	</head>
+	<body> -->
+
+<%- include('header'); -%>
+
+<div class="box" id="heading">
+	<h1><%= listTitle %></h1>
+</div>
+
+<div class="box">
+	<!-- <% for( let i = 0; i < newListItem.length ; i++) {%>
+	<div class="item">
+		<input type="checkbox" name="" id="" />
+		<p><%= newListItem[i].name %></p>
+	</div>
+
+	<%}%> -->
+	<!-- 
+	<% newListItem.forEach(item => { %>
+	<form action="/delete" method="post">
+		<div class="item">
+			<input
+				type="checkbox"
+				name="checkbox"
+				onchange="this.from.submit()"
+				value="<%= item._id %>"
+			/>
+			<p><%= item.name %></p>
+		</div>
+	</form>
+	<% }); %> -->
+
+	<!-- <form action="/delete" method="post">
+		<% newListItem.forEach(item => { %>
+		<div class="item">
+			<input
+				type="checkbox"
+				name="checkbox"
+				onchange="ts.form.submit()"
+				value="<%= item._id %>"
+			/>
+			<p><%= item.name %></p>
+		</div>
+		<input type="hidden" name="listName" value="<%= listTitle %>"> </input>
+		<% }); %>
+
+	</form> -->
+
+	<form action="/delete" method="post">
+		<% newListItem.forEach(item => { %>
+		<div class="item">
+			<input
+				type="checkbox"
+				name="checkbox"
+				onchange="this.form.submit()"
+				value="<%= item._id %>"
+			/>
+			<p><%= item.name %></p>
+		</div>
+		<% }); %>
+		<input type="hidden" name="listName" value="<%= listTitle %>" />
+	</form>
+
+	<form action="/" method="post" class="item">
+		<input type="text" name="newItem" placeholder="Enter your task" />
+		<button type="submit" name="list" value="<%= listTitle %>">+</button>
+	</form>
+</div>
+
+<%- include('footer'); -%>
+<!-- </body>
+ 
+</html> -->
